@@ -1,11 +1,10 @@
 // CARRITO DE COMPRAS
-$('#carritoInner').hide();
+
 // MOSTRAR Y OCULTAR CARRITO CON ANIMACION
 $('#carrito').click(function (e) { 
     e.preventDefault();
 
-    $('#carritoInner').animate({right: 0}, 1000, function () {console.log('ok');})
-                      .show();
+    $('#carritoInner').animate({right: 0}, 1000, function () {console.log('ok');});
     
     $('main').css({'opacity': '0.5'});
 });
@@ -31,21 +30,37 @@ let productosCarrito = [];
 
 let total = 0;
 
-$('button').click(function (e) { 
-
-    console.log('sirve el click');
+$('.btn').click(function (e) { 
+    e.preventDefault();
     let productoSeleccionado = productos.find(element => element.id == e.target.id);
-    productosCarrito.push(productoSeleccionado.nombre);
+    
+    productosCarrito.push(productoSeleccionado);
 
     $('#iconSinProductos, #sinProductos').hide();
 
-    $('#productosAgregados').append(`<div class="container border-bottom pt-3">
-                                        <img src="${productoSeleccionado.src}" class="col-4 d-inline">
-                                        <p class="d-inline">${productoSeleccionado.nombre}</p>
-                                        <p class="col-12 text-right">$${productoSeleccionado.precio}</p>
+    $('#productosAgregados').append(`<div class="row border-bottom pt-3 productoCarrito">
+                                        <img src="${productoSeleccionado.src}" class="col-4">
+                                        <p class="col-4">${productoSeleccionado.nombre}</p>
+                                        <p class="col-1 offset-2 x">x</p>
+                                        <p class="col-12 text-right precio">${productoSeleccionado.precio}</p>
                                      </div>`);
-
-    total += productoSeleccionado.precio;
     
+    
+    
+    total += productoSeleccionado.precio;
+
     $('#subTotal').text(`Subtotal: ${total}`);
+
+    // ELIMINAR PRODUCTOS DEL CARRITO
+    $('.x').off().click(function (e) { 
+        e.preventDefault();
+
+        let precioADescontar = parseInt(e.target.nextElementSibling.innerText);
+
+        total -= precioADescontar;
+
+        $(e.target.parentNode).remove();
+
+        $('#subTotal').text(`Subtotal: ${total}`);
+    });
 });

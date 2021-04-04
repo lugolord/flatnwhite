@@ -1,15 +1,18 @@
+body {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
 header {
   background-color: white;
 }
 
 .nav-link {
   color: #707070;
-  font-size: 20px;
 }
 
 #carrito p {
-  color: #707070; 
-  font-size: 20px; 
+  color: #707070;  
   padding: 8px 16px;
 }
 
@@ -18,7 +21,6 @@ header {
   position: absolute; 
   right: 50px; 
   top: 30px; 
-  font-size: 20px;
 }
 
 #hr {
@@ -66,7 +68,10 @@ header {
 
 .breadcrumb-item a {
   color: #707070;
-  font-size: 20px;
+}
+
+.breadcrumb-item a:hover {
+  color: #48D112;
 }
 
 #carrito {
@@ -78,10 +83,14 @@ header {
   width: 400px;
   height: 100%;
   position: fixed;
-  right: 0;
+  right: -400px;
   top: 0;
 }
 
 #closeCart {
+  cursor: pointer;
+}
+
+.x {
   cursor: pointer;
 }
