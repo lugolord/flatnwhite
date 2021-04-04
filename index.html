@@ -24,8 +24,25 @@
         </div>
 
         <!-- CARRITO -->
-        <div class="col-4">
-          <p class="m-0 text-right" style="color: #707070; font-size: 20px; padding: 8px 0;">Cart</p>
+        <div class="col-4" id="carrito">
+          <p class="m-0 text-right">Cart</p>
+        </div>
+
+        <div id="carritoInner">
+
+          <p  id="closeCart">Close</p>
+
+          <hr id="hr">
+          
+          <div class="container" id="productosAgregados">
+            <i class="far fa-times-circle fa-3x col-12 text-center" id="iconSinProductos"></i>
+            <p class="col-12 text-center" id="sinProductos">No hay productos en el carrito</p>
+          </div>
+
+          <div id="subTotal"></div>
+
+          <p id="keepShopping">Seguir comprando</p>
+
         </div>
         
       </header>
@@ -72,7 +89,11 @@
       </footer>
 
       <!-- SCRIPTS -->
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
       <script src="js/bootstrap.min.js"></script>
+      <script src="js/data.js"></script>
+      <script src="js/cards.js"></script>
+      <script src="js/sections.js"></script>
+      <script src="js/carrito.js"></script>
     </body>
 </html>
