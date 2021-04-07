@@ -36,6 +36,11 @@ $('.btn').click(function (e) {
     
     productosCarrito.push(productoSeleccionado);
 
+    let productosCarritoJSON = JSON.stringify(productosCarrito);
+
+    // GUARDO EN STORAGE PRODUCTOS AGREGADOS AL CARRITO
+    localStorage.setItem('productosCarrito', productosCarritoJSON);
+
     $('#iconSinProductos, #sinProductos').hide();
 
     $('#productosAgregados').append(`<div class="row border-bottom pt-3 productoCarrito">
@@ -63,4 +68,4 @@ $('.btn').click(function (e) {
 
         $('#subTotal').text(`Subtotal: ${total}`);
     });
-});
+}); 

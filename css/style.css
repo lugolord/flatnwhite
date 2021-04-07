@@ -11,6 +11,10 @@ header {
   color: #707070;
 }
 
+.nav-link:hover {
+  color: black;
+}
+
 #carrito p {
   color: #707070;  
   padding: 8px 16px;
@@ -92,5 +96,22 @@ header {
 }
 
 .x {
+  cursor: pointer;
+}
+
+#landingImg {
+  height: 550px;
+}
+
+#navFooter .nav-link {
+  color: #707070;
+}
+
+#navFooter .nav-link:hover {
+  color: white;
+}
+
+.fa-instagram {
+  color: white;
   cursor: pointer;
 }

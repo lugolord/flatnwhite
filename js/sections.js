@@ -18,6 +18,11 @@ $('#seccionTodo').click(function (e) {
         
         productosCarrito.push(productoSeleccionado);
 
+        let productosCarritoJSON = JSON.stringify(productosCarrito);
+
+        // GUARDO EN STORAGE PRODUCTOS AGREGADOS AL CARRITO
+        localStorage.setItem('productosCarrito', productosCarritoJSON);
+
         $('#iconSinProductos, #sinProductos').hide();
 
         $('#productosAgregados').append(`<div class="row border-bottom pt-3">
@@ -65,6 +70,11 @@ $('#seccionCafes').click(function (e) {
         let productoSeleccionado = productos.find(element => element.id == e.target.id);
         
         productosCarrito.push(productoSeleccionado);
+
+        let productosCarritoJSON = JSON.stringify(productosCarrito);
+
+        // GUARDO EN STORAGE PRODUCTOS AGREGADOS AL CARRITO
+        localStorage.setItem('productosCarrito', productosCarritoJSON);
 
         $('#iconSinProductos, #sinProductos').hide();
 
@@ -116,6 +126,11 @@ $('#seccionCafeteras').click(function (e) {
         let productoSeleccionado = productos.find(element => element.id == e.target.id);
         
         productosCarrito.push(productoSeleccionado);
+
+        let productosCarritoJSON = JSON.stringify(productosCarrito);
+
+        // GUARDO EN STORAGE PRODUCTOS AGREGADOS AL CARRITO
+        localStorage.setItem('productosCarrito', productosCarritoJSON);
 
         $('#iconSinProductos, #sinProductos').hide();
 

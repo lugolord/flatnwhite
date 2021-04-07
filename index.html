@@ -4,7 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css"> 
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/5b464d04e4.js" crossorigin="anonymous"></script> 
     </head>
 
     <body class="container-fluid">
@@ -13,9 +16,9 @@
         
         <!-- NAVBAR -->
         <nav class="nav col-4">
-          <a class="nav-link active" href="pages/shop.html" style="color: #707070; font-size: 20px;">Shop</a>
-          <a class="nav-link" href="#!" style="color: #707070; font-size: 20px;">Learn</a>
-          <a class="nav-link disabled" href="#!" style="color: #707070; font-size: 20px;">Visit us</a>
+          <a class="nav-link active" href="pages/shop.html">Shop</a>
+          <a class="nav-link disabled" href="#!">Learn</a>
+          <a class="nav-link disabled" href="#!">Visit us</a>
         </nav>
 
         <!-- LOGO -->
@@ -51,7 +54,7 @@
 
         <!-- LANDING IMG -->
         <div class="col-12 text-center mb-5">
-          <img src="images/martubg.jpg"  class="col-12 pr-0 pl-0" style="height: 600px;">
+          <img src="images/landing.jpg"  class="col-12 pr-0 pl-0" id="landingImg">
         </div>
         
         <!-- SECCION CAFE -->
@@ -78,14 +81,32 @@
         <div class="col-5 mt-5 p-5 d-flex flex-wrap align-content-center">
           <h1>Cafeteras</h1>
           <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolores! Ex ab doloribus ad eveniet quo animi esse exercitationem eligendi quia quis magni enim, ratione sunt beatae debitis tenetur magnam incidunt labore veniam reprehenderit adipisci dolores excepturi dignissimos a? Quisquam consequuntur dolores iste nulla vitae pariatur iure delectus enim quod!</p>
-          <button type="button" class="btn btn-outline-secondary">Comprar cafeteras</button>
+          <button type="submit" class="btn btn-outline-secondary">Comprar cafeteras</button>
         </div>
 
       </main>
 
-      <footer class="row mt-5" style="height: 400px; background-color: black;">
-        <h3 class="d-block">Suscribete a nuestro newsletter</h3>
-        <p>Obten un 20% de descuento en tu primera orden</p>
+      <footer class="row mt-5" style="height: 300px; background-color: black;">
+         
+        <div class="col-5 mt-5">
+          <p style="color: white;">Suscribete a nuestro Newsletter</p>
+          <p style="color: white;">20% de descuento en tu primera compra</p>
+          <input type="text" placeholder="Ingresa tu email">
+          <button type="button" class="d-block mt-3">Suscribirse</button>
+        </div>
+
+        <nav class="nav col-11" id="navFooter">
+          <a class="nav-link active" href="#!">Sobre nosotros</a>
+          <a class="nav-link active" href="#!">FAQ</a>
+          <a class="nav-link active" href="#!">Devoluciones</a>
+          <a class="nav-link active" href="#!">Términos y condiciones</a>
+          <a class="nav-link active" href="#!">Contacto</a>
+        </nav>
+
+        <a href="https://www.instagram.com/flatnwhiteba/" target="_blank">
+          <i class="fab fa-instagram fa-2x col-1"></i>
+        </a>
+
       </footer>
 
       <!-- SCRIPTS -->
