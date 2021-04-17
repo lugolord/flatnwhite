@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ES">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>flat&white</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/5b464d04e4.js" crossorigin="anonymous"></script> 
+    </head>
+
+    <body class="container-fluid">
+      
+      <header class="row mt-1 pb-3 sticky-top">
+        
+        <!-- NAVBAR -->
+        <nav class="nav col-4">
+          <a class="nav-link active" href="pages/shop.html">Shop</a>
+          <a class="nav-link disabled" href="#!">Learn</a>
+          <a class="nav-link disabled" href="#!">Visit us</a>
+        </nav>
+
+        <!-- LOGO -->
+        <div class="logo col-4">
+          <a href="index.html"><img src="images/f&w-logo.png" class="col-12"></a>
+        </div>
+
+        <!-- CARRITO -->
+        <div class="col-4" id="carrito">
+          <p class="m-0 text-right">Cart</p>
+        </div>
+
+        <div id="carritoInner">
+
+          <p  id="closeCart">Close</p>
+
+          <hr id="hr">
+          
+          <div class="container" id="productosAgregados">
+            <i class="far fa-times-circle fa-3x col-12 text-center" id="iconSinProductos"></i>
+            <p class="col-12 text-center" id="sinProductos">No hay productos en el carrito</p>
+          </div>
+
+          <div id="subTotal"></div>
+
+          <p id="keepShopping">Seguir comprando</p>
+
+        </div>
+        
+      </header>
+
+      <main class="row mt-3 mb-3">
+
+        <!-- LANDING IMG -->
+        <div class="col-12 text-center mb-5">
+          <img src="images/landing.jpg"  class="col-12 pr-0 pl-0" id="landingImg">
+        </div>
+        
+        <!-- SECCION CAFE -->
+        <img src="images/coffee.jpg" class="col-7 mt-5">
+
+        <div class="col-5 mt-5 p-5 d-flex flex-wrap align-content-center">
+          <h1>Cafes de especialidad</h1>
+          <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolores! Ex ab doloribus ad eveniet quo animi esse exercitationem eligendi quia quis magni enim, ratione sunt beatae debitis tenetur magnam incidunt labore veniam reprehenderit adipisci dolores excepturi dignissimos a? Quisquam consequuntur dolores iste nulla vitae pariatur iure delectus enim quod!</p>
+          <button type="button" class="btn btn-outline-secondary rounded-0">Comprar nuestros cafes</button>
+        </div>
+
+        <!-- SECCION ACCESORIOS -->
+        <div class="col-5 mt-5 p-5 d-flex flex-wrap align-content-center">
+          <h1>Accesorios</h1>
+          <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolores! Ex ab doloribus ad eveniet quo animi esse exercitationem eligendi quia quis magni enim, ratione sunt beatae debitis tenetur magnam incidunt labore veniam reprehenderit adipisci dolores excepturi dignissimos a? Quisquam consequuntur dolores iste nulla vitae pariatur iure delectus enim quod!</p>
+          <button type="button" class="btn btn-outline-secondary rounded-0">Comprar accesorios</button>
+        </div>
+
+        <img src="images/accesorios.jpg" class="col-7 mt-5">
+
+        <!-- SECCION CAFETERAS -->
+        <img src="images/cafeteras.jpg" class="col-7 mt-5">
+
+        <div class="col-5 mt-5 p-5 d-flex flex-wrap align-content-center">
+          <h1>Cafeteras</h1>
+          <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolores! Ex ab doloribus ad eveniet quo animi esse exercitationem eligendi quia quis magni enim, ratione sunt beatae debitis tenetur magnam incidunt labore veniam reprehenderit adipisci dolores excepturi dignissimos a? Quisquam consequuntur dolores iste nulla vitae pariatur iure delectus enim quod!</p>
+          <button type="submit" class="btn btn-outline-secondary rounded-0">Comprar cafeteras</button>
+        </div>
+
+      </main>
+
+      <footer class="row mt-5">
+         
+        <div class="col-5 mt-5" id="newsLetter">
+          <p>Suscribete a nuestro Newsletter</p>
+          <p>20% de descuento en tu primera compra</p>
+          <input type="text" placeholder="Ingresa tu email">
+          <button type="submit" class="btn btn-secondary rounded-0 d-block mt-3">Suscribirse</button>
+        </div>
+
+        <nav class="nav col-11" id="navFooter">
+          <a class="nav-link active" href="#!">Sobre nosotros</a>
+          <a class="nav-link active" href="#!">FAQ</a>
+          <a class="nav-link active" href="#!">Devoluciones</a>
+          <a class="nav-link active" href="#!">Términos y condiciones</a>
+          <a class="nav-link active" href="#!">Contacto</a>
+        </nav>
+
+        <a href="https://www.instagram.com/flatnwhiteba/" target="_blank">
+          <i class="fab fa-instagram fa-2x col-1"></i>
+        </a>
+
+      </footer>
+
+      <!-- SCRIPTS -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/data.js"></script>
+      <script src="js/functions.js"></script>
+      <script src="js/cards.js"></script>
+      <script src="js/carrito.js"></script>
+      <script src="js/sections.js"></script>
+    </body>
+</html>

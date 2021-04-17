@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ES">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>f&w Store</title>
+      <link rel="stylesheet" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" href="../css/style.css"> 
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/5b464d04e4.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body class="container-fluid">
+      
+      <header class="row mt-1 pb-3 border-bottom sticky-top">
+        
+        <!-- NAVBAR -->
+        <nav class="nav col-4">
+          <a class="nav-link active" href="shop.html">Shop</a>
+          <a class="nav-link disabled" href="#!">Learn</a>
+          <a class="nav-link disabled" href="#!">Visit us</a>
+        </nav>
+
+        <!-- LOGO -->
+        <div class="logo col-4">
+          <a href="../index.html"><img src="../images/f&w-logo.png" class="col-12"></a>
+        </div>
+
+        <!-- CARRITO -->
+        <div class="col-4" id="carrito">
+          <p class="m-0 text-right">Cart<sup id="productosAñadidosAlCarrito" style="color: #48d112; font-size: 14px;">0</sup></p>
+        </div>
+
+        <div id="carritoInner">
+
+          <p  id="closeCart">Close</p>
+
+          <hr id="hr">
+          
+          <div class="container" id="productosAgregados">
+            <i class="far fa-times-circle fa-3x col-12 text-center" id="iconSinProductos"></i>
+            <p class="col-12 text-center" id="sinProductos">No hay productos en el carrito</p>
+          </div>
+
+          <div id="subTotal" class="col-10"></div>
+
+          <p id="keepShopping">Seguir comprando</p>
+
+
+        </div>
+        
+      </header>
+
+      <main>
+
+        <div class="row mt-5">
+
+          <!-- CATEGORIAS -->
+          <div class="col-6">
+            <nav aria-label="breadcrumb" class="secciones">
+              <ol class="breadcrumb pl-0">
+                <li class="breadcrumb-item"><a href="#todo" id="seccionTodo" class="text-decoration-none">Todo</a></li>
+                <li class="breadcrumb-item"><a href="#cafes" id="cafe" class="text-decoration-none">Cafes</a></li>
+                <li class="breadcrumb-item"><a href="#cafeteras" id="cafetera" class="text-decoration-none">Cafeteras</a></li>
+                <li class="breadcrumb-item"><a href="#accesorios" id="accesorio" class="text-decoration-none">Accesorios</a></li>
+              </ol>
+            </nav>
+          </div>
+
+          <!-- FILTRO Y BUSQUEDA -->
+          <div class="col-6 d-flex justify-content-end">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb "> 
+                <li class="breadcrumb-item "><a href="#" class="text-decoration-none text-left">Filtrar</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none" id="buscar">Buscar <i class="fas fa-search"></i></a></li>
+              </ol>
+            </nav>
+          </div>
+
+          <div id="barraBusquedaContenedor" class="col-12"></div>
+
+        </div>
+
+        <!-- PRODUCTOS -->
+        <div class="row mt-5" id="productos"></div>
+
+      </main>
+
+      <footer class="row mt-5">
+
+        <!-- NEWSLETTER --> 
+        <div class="col-5 mt-5" id="newsLetter">
+          <p>Suscribete a nuestro Newsletter</p>
+          <p>20% de descuento en tu primera compra</p>
+          <input type="text" placeholder="Ingresa tu email">
+          <button type="button" class="d-block mt-3">Suscribirse</button>
+        </div>
+        
+        <nav class="nav col-11" id="navFooter">
+          <a class="nav-link active" href="#!">Sobre nosotros</a>
+          <a class="nav-link active" href="#!">FAQ</a>
+          <a class="nav-link active" href="#!">Devoluciones</a>
+          <a class="nav-link active" href="#!">Términos y condiciones</a>
+          <a class="nav-link active" href="#!">Contacto</a>
+        </nav>
+
+        <!-- LINK A INSTAGRAM -->
+        <a href="https://www.instagram.com/flatnwhiteba/" target="_blank">
+          <i class="fab fa-instagram fa-2x col-1"></i>
+        </a>
+
+      </footer>
+
+      <!-- SCRIPTS -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script src="../js/bootstrap.min.js"></script>
+      <script src="../js/data.js"></script>
+      <script src="../js/functions.js"></script>
+      <script src="../js/cards.js"></script>
+      <script src="../js/sections.js"></script>
+      <script src="../js/carrito.js"></script>
+    </body>
+
+</html>
