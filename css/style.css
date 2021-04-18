@@ -52,7 +52,7 @@ header {
 
 #subTotal {
   position: absolute; 
-  top: 500px; 
+  top: 450px; 
   left: 20px;
   color: white;
 }
@@ -60,11 +60,22 @@ header {
 #keepShopping {
   position: absolute; 
   top: 90%; 
-  left: 35px; 
+  left: 25px; 
   color: white; 
   border: solid 1px #707070; 
   padding: 10px 100px;
   cursor: pointer;
+}
+
+#vaciarCarrito {
+  position: absolute;
+  top: 80%; 
+  left: 25px; 
+  color: white; 
+  border: solid 1px #707070; 
+  padding: 10px 112px;
+  cursor: pointer;
+  visibility: hidden;
 }
 
 .breadcrumb {
@@ -77,6 +88,10 @@ header {
 
 .breadcrumb-item a:hover {
   color: #48D112;
+}
+
+#cerrarBarraBusqueda:hover {
+  color: black;
 }
 
 #carrito {
@@ -92,12 +107,76 @@ header {
   top: 0;
 }
 
+@media (max-width: 321px) {
+  #carritoInner {
+    background-color: #464646;
+    width: 320px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+  #hr {
+    background-color: #707070; 
+    position: absolute; 
+    top: 75px; 
+    right: 10px; 
+    width: 300px;
+  }
+
+  #productosAgregados {
+    position: absolute; 
+    top: 120px; 
+    left: 10px; 
+    color: white; 
+    width: 300px;
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+
+  #subTotal {
+    position: absolute; 
+    top: 60%; 
+    left: 20px;
+    color: white;
+  }
+
+  #keepShopping {
+    position: absolute; 
+    top: 90%; 
+    width: 270px; 
+    padding: 10px;
+    text-align: center;
+    color: white; 
+    border: solid 1px #707070; 
+    cursor: pointer;
+  }
+
+  #vaciarCarrito {
+    position: absolute;
+    top: 75%; 
+    width: 270px; 
+    padding: 10px;
+    text-align: center;
+    color: white; 
+    border: solid 1px #707070; 
+    cursor: pointer;
+    visibility: hidden;
+  }
+}
+
 #closeCart {
   cursor: pointer;
 }
 
 .x {
   cursor: pointer;
+  color: #777777;
+}
+
+.x:hover {
+  color: white;
 }
 
 #landingImg {
@@ -105,7 +184,7 @@ header {
 }
 
 footer {
-  height: 300px;
+  /*height: 300px;*/
   background-color: black;
 }
 
