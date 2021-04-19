@@ -110,7 +110,7 @@ header {
 @media (max-width: 321px) {
   #carritoInner {
     background-color: #464646;
-    width: 320px;
+    width: 300px;
     height: 100%;
     position: fixed;
     right: 0;
@@ -122,7 +122,7 @@ header {
     position: absolute; 
     top: 75px; 
     right: 10px; 
-    width: 300px;
+    width: 280px;
   }
 
   #productosAgregados {
@@ -145,7 +145,9 @@ header {
   #keepShopping {
     position: absolute; 
     top: 90%; 
-    width: 270px; 
+    left: 25px;
+    right: 25px;
+    width: 250px; 
     padding: 10px;
     text-align: center;
     color: white; 
@@ -156,7 +158,7 @@ header {
   #vaciarCarrito {
     position: absolute;
     top: 75%; 
-    width: 270px; 
+    width: 250px; 
     padding: 10px;
     text-align: center;
     color: white; 
@@ -184,7 +186,6 @@ header {
 }
 
 footer {
-  /*height: 300px;*/
   background-color: black;
 }
 
