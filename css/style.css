@@ -107,7 +107,7 @@ header {
   top: 0;
 }
 
-@media (max-width: 321px) {
+@media (max-width: 426px) {
   #carritoInner {
     background-color: #464646;
     width: 300px;
