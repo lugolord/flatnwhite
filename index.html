@@ -1,111 +1,130 @@
 <!DOCTYPE html>
 <html lang="ES">
     <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>flat&white</title>
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-      <script src="https://kit.fontawesome.com/5b464d04e4.js" crossorigin="anonymous"></script> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/5b464d04e4.js" crossorigin="anonymous"></script>
     </head>
-
     <body class="container-fluid">
-      
-      <header class="row mt-1 pb-3 sticky-top">
+
+      <header class="row pb-1 mb-lg-3 mt-lg-3 sticky-top">
+
+        <!-- NAVBAR LG- DEVICES -->
+        <nav class="navbar navbar-light light-blue lighten-4 col-md-12 d-lg-none">
+
+          <!-- Navbar brand -->
+          <a class="navbar-brand col-8 pl-0 pr-0" href="#"><img src="images/f&w-logo.png" class="col-12 col-md-6 pl-0 pr-0"></a>
+
+          <!-- Collapse button -->
+          <button class="navbar-toggler toggler-example col-2 col-md-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+            aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+                class="fas fa-bars fa-1x"></i></span></button>
+
+          <!-- Collapsible content -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active border-bottom">
+                <a class="nav-link" href="pages/shop.html">Shop <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item border-bottom">
+                <a class="nav-link" href="#">Learn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Visit us</a>
+              </li>
+            </ul>
+
+          </div>
+
+        </nav>
         
-        <!-- NAVBAR -->
-        <nav class="nav col-4">
-          <a class="nav-link active" href="pages/shop.html">Shop</a>
-          <a class="nav-link disabled" href="#!">Learn</a>
-          <a class="nav-link disabled" href="#!">Visit us</a>
+        <!-- NAVBAR LG & LG+ DEVICES -->
+        <nav class="nav col-lg-4 d-none d-lg-block">
+          <a class="nav-link active d-lg-inline" href="pages/shop.html">Shop</a>
+          <a class="nav-link disabled d-lg-inline" href="#!">Learn</a> <!-- SOON -->
+          <a class="nav-link disabled d-lg-inline" href="#!">Visit us</a> <!-- SOON -->
         </nav>
 
-        <!-- LOGO -->
-        <div class="logo col-4">
+        <!-- LOGO LG & LG+ DEVICES ONLY -->
+        <div class="col-lg-4 d-none d-lg-block">
           <a href="index.html"><img src="images/f&w-logo.png" class="col-12"></a>
         </div>
 
-        <!-- CARRITO -->
-        <div class="col-4" id="carrito">
+        <!-- CARRITO, FUNCIONA SOLO EN "SHOP" -->
+        <div class="col-4 d-none d-lg-block">
           <p class="m-0 text-right">Cart</p>
         </div>
 
-        <div id="carritoInner">
-
-          <p  id="closeCart">Close</p>
-
-          <hr id="hr">
-          
-          <div class="container" id="productosAgregados">
-            <i class="far fa-times-circle fa-3x col-12 text-center" id="iconSinProductos"></i>
-            <p class="col-12 text-center" id="sinProductos">No hay productos en el carrito</p>
-          </div>
-
-          <div id="subTotal"></div>
-
-          <p id="keepShopping">Seguir comprando</p>
-
         </div>
-        
+
       </header>
+      
+      <main class="row">
 
-      <main class="row mt-3 mb-3">
+        <!-- LANDING IMG SM DEVICES-->
+        <img src="images/landingSM.jpg" class="col-12 pl-0 pr-0 d-md-none" style="height: 85vh;">
 
-        <!-- LANDING IMG -->
-        <div class="col-12 text-center mb-5">
-          <img src="images/landing.jpg"  class="col-12 pr-0 pl-0" id="landingImg">
-        </div>
-        
+        <!-- LANDING IMG MD & MD+ DEVICES-->
+        <img src="images/landing.jpg" class="col-12 pl-0 pr-0 pl-lg-3 pr-lg-3 d-none d-md-block" style="height: 85vh;">
+
         <!-- SECCION CAFE -->
-        <img src="images/coffee.jpg" class="col-7 mt-5">
+        <img src="images/coffee.jpg" class="col-12 col-md-6 mt-5 pr-md-0 order-md-1">
 
-        <div class="col-5 mt-5 p-5 d-flex flex-wrap align-content-center">
-          <h1>Cafes de especialidad</h1>
-          <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolores! Ex ab doloribus ad eveniet quo animi esse exercitationem eligendi quia quis magni enim, ratione sunt beatae debitis tenetur magnam incidunt labore veniam reprehenderit adipisci dolores excepturi dignissimos a? Quisquam consequuntur dolores iste nulla vitae pariatur iure delectus enim quod!</p>
-          <button type="button" class="btn btn-outline-secondary rounded-0">Comprar nuestros cafes</button>
+        <div class="col-12 col-md-6 mt-md-5 order-md-2 align-self-xl-center">
+          <h1 class="mt-3 mt-md-0" style="font-size: 1.25rem">Cafes de especialidad</h1>
+          <p class="text-justify mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolores! Ex ab doloribus ad eveniet quo animi esse exercitationem eligendi quia quis magni enim, ratione sunt beatae debitis tenetur magnam incidunt labore veniam reprehenderit adipisci dolores excepturi dignissimos a? Quisquam consequuntur dolores iste nulla vitae pariatur iure delectus enim quod!</p>
+          <button type="button" class="btn btn-outline-secondary rounded-0 col-12">Comprar nuestros cafes</button>
         </div>
 
         <!-- SECCION ACCESORIOS -->
-        <div class="col-5 mt-5 p-5 d-flex flex-wrap align-content-center">
-          <h1>Accesorios</h1>
-          <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolores! Ex ab doloribus ad eveniet quo animi esse exercitationem eligendi quia quis magni enim, ratione sunt beatae debitis tenetur magnam incidunt labore veniam reprehenderit adipisci dolores excepturi dignissimos a? Quisquam consequuntur dolores iste nulla vitae pariatur iure delectus enim quod!</p>
-          <button type="button" class="btn btn-outline-secondary rounded-0">Comprar accesorios</button>
+        <img src="images/accesorios.jpg" class="col-12 col-md-6 mt-5 pl-md-0 order-md-4">
+
+        <div class="col-12 col-md-6 mt-md-5 order-md-3 align-self-xl-center">
+          <h1 class="mt-3 mt-md-0" style="font-size: 1.25rem">Accesorios</h1>
+          <p class="text-justify mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolores! Ex ab doloribus ad eveniet quo animi esse exercitationem eligendi quia quis magni enim, ratione sunt beatae debitis tenetur magnam incidunt labore veniam reprehenderit adipisci dolores excepturi dignissimos a? Quisquam consequuntur dolores iste nulla vitae pariatur iure delectus enim quod!</p>
+          <button type="button" class="btn btn-outline-secondary rounded-0 col-12">Comprar accesorios</button>
         </div>
 
-        <img src="images/accesorios.jpg" class="col-7 mt-5">
-
         <!-- SECCION CAFETERAS -->
-        <img src="images/cafeteras.jpg" class="col-7 mt-5">
+        <img src="images/cafeteras.jpg" class="col-12 col-md-6 mt-5 order-md-5 pr-md-0">
 
-        <div class="col-5 mt-5 p-5 d-flex flex-wrap align-content-center">
-          <h1>Cafeteras</h1>
-          <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolores! Ex ab doloribus ad eveniet quo animi esse exercitationem eligendi quia quis magni enim, ratione sunt beatae debitis tenetur magnam incidunt labore veniam reprehenderit adipisci dolores excepturi dignissimos a? Quisquam consequuntur dolores iste nulla vitae pariatur iure delectus enim quod!</p>
-          <button type="submit" class="btn btn-outline-secondary rounded-0">Comprar cafeteras</button>
+        <div class="col-12 col-md-6 mt-md-5 order-md-6 align-self-xl-center">
+          <h1 class="mt-3 mt-md-0" style="font-size: 1.25rem">Cafeteras</h1>
+          <p class="text-justify mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolores! Ex ab doloribus ad eveniet quo animi esse exercitationem eligendi quia quis magni enim, ratione sunt beatae debitis tenetur magnam incidunt labore veniam reprehenderit adipisci dolores excepturi dignissimos a? Quisquam consequuntur dolores iste nulla vitae pariatur iure delectus enim quod!</p>
+          <button type="submit" class="btn btn-outline-secondary rounded-0 col-12">Comprar cafeteras</button>
         </div>
 
       </main>
 
       <footer class="row mt-5">
-         
-        <div class="col-5 mt-5" id="newsLetter">
+
+        <!-- NEWSLETTER --> 
+        <div class="col-12 col-xl-5 mt-5" id="newsLetter">
           <p>Suscribete a nuestro Newsletter</p>
           <p>20% de descuento en tu primera compra</p>
           <input type="text" placeholder="Ingresa tu email">
           <button type="submit" class="btn btn-secondary rounded-0 d-block mt-3">Suscribirse</button>
         </div>
-
-        <nav class="nav col-11" id="navFooter">
-          <a class="nav-link active" href="#!">Sobre nosotros</a>
-          <a class="nav-link active" href="#!">FAQ</a>
-          <a class="nav-link active" href="#!">Devoluciones</a>
-          <a class="nav-link active" href="#!">Términos y condiciones</a>
-          <a class="nav-link active" href="#!">Contacto</a>
+        
+        <nav class="nav col-12 col-lg-11 mt-5 mt-xl-5 mb-xl-3 d-block" id="navFooter">
+          <a class="nav-link active d-md-inline d-xl-inline" href="#!">Sobre nosotros</a>
+          <a class="nav-link active d-md-inline d-xl-inline" href="#!">FAQ</a>
+          <a class="nav-link active d-md-inline d-xl-inline" href="#!">Devoluciones</a>
+          <a class="nav-link active d-md-inline d-xl-inline" href="#!">Términos y condiciones</a>
+          <a class="nav-link active d-md-inline d-xl-inline" href="#!">Contacto</a>
         </nav>
 
-        <a href="https://www.instagram.com/flatnwhiteba/" target="_blank">
-          <i class="fab fa-instagram fa-2x col-1"></i>
+        <!-- LINK A INSTAGRAM -->
+        <a href="https://www.instagram.com/flatnwhiteba/" target="_blank" class="mt-3 mt-lg-5 mb-3 mb-lg-3 mt-xl-5 mb-xl-3 col-1">
+          <i class="fab fa-instagram fa-2x"></i>
         </a>
 
       </footer>
