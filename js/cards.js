@@ -10,7 +10,7 @@ $.getJSON(products, function (respuesta, estado) {
                                       <img src="${producto.src}" class="col-12">
                                       <p class="col-12 mb-0">${producto.nombre}</p>
                                       <p class="col-12" style="color: green;">$${producto.precio}</p>
-                                      <button type="button" class="btn btn-outline-dark col-10 col-xl-4 offset-1 ml-xl-3 rounded-0" id="${producto.id}">Comprar</button>
+                                      <button type="button" class="btn btn-outline-dark col-10 col-xl-4 offset-1 ml-xl-3 rounded-0 btnCompra" id="${producto.id}">Comprar</button>
                                     </div> `);
         }
 

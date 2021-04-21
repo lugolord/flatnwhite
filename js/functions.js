@@ -1,5 +1,5 @@
 function carrito() {
-    $('.btn').click(function (e) { // EVENTO PARA AGREGAR AL CARRITO VISUAL
+    $('.btnCompra').click(function (e) { // EVENTO PARA AGREGAR AL CARRITO VISUAL
     
         let productoSeleccionado = productos.find(element => element.id == e.target.id); //FILTRO POR ID   
         productosCarrito.push(productoSeleccionado); //AGREGO AL ARRAY DE PRODUCTOS DEL CARRITO
@@ -27,8 +27,9 @@ function carrito() {
 
         //CAMBIO EL TEXTO DEL BOTON A "FINALIZAR COMPRA" Y SI LO CLIQUEO DISPARO ALERTA SIMULANDO LA FINALIZACION DE LA COMPRA
         if ($('#keepShopping').text() == 'Finalizar compra') {
-            $('#keepShopping').off().click(function (e) { 
+            $('#keepShopping').off().click(function (e) {
                 alert('Compra finalizada. Muchas gracias!');
+                vaciarCarrito();
             });
         }; 
 
@@ -101,7 +102,7 @@ function construirSeccion(x) { //CONSTRUYE LAS CARDS POR CATEGORIA
                                           <img src="${whatever.src}" class="col-12">
                                           <p class="col-12 mb-0">${whatever.nombre}</p>
                                           <p class="col-12" style="color: green;">$${whatever.precio}</p>
-                                          <button type="button" class="btn btn-outline-dark col-10 col-xl-4 offset-1 ml-xl-3 rounded-0" id="${whatever.id}">Comprar</button
+                                          <button type="button" class="btn btn-outline-dark col-10 col-xl-4 offset-1 ml-xl-3 rounded-0 btnCompra" id="${whatever.id}">Comprar</button
                                         </div>`);
             }
         });
@@ -148,7 +149,7 @@ function filtrar() { //FILTRA LOS RESULTADOS BUSCADOS EN LA BARRA DE BUSQUEDA
                                           <img src="${producto.src}" class="col-12">
                                           <p class="col-12 mb-0">${producto.nombre}</p>
                                           <p class="col-12" style="color: green;">$${producto.precio}</p>
-                                          <button type="button" class="btn btn-outline-dark col-10 col-xl-4 offset-1 ml-xl-3 rounded-0" id="${producto.id}">Comprar</button>
+                                          <button type="button" class="btn btn-outline-dark col-10 col-xl-4 offset-1 ml-xl-3 rounded-0 btnCompra" id="${producto.id}">Comprar</button>
                                         </div> `);                  
             }
         }
@@ -161,4 +162,27 @@ function filtrar() { //FILTRA LOS RESULTADOS BUSCADOS EN LA BARRA DE BUSQUEDA
 
         carrito();
     });
+}
+
+function vaciarCarrito() { //VACIA EL CARRITO
+    
+    totalProductosAñadidos=0; //REINICIO EL CONTADOR DEL CARRITO
+    $('#productosAñadidosAlCarrito').text(totalProductosAñadidos);
+
+    total = 0; //REINICIO EL SUBTOTAL
+
+    $('#vaciarCarrito').css({'visibility': 'hidden'});
+
+    $('#productosAgregados, #subTotal').empty(); //ELIMINO TODOS LOS PRODUCTOS Y EL SUBTOTAL DEL CARRITO VISUAL
+
+    //MUESTRO DE NUEVO PREVIEW SIN PRODUCTOS
+    $('#productosAgregados').append(`<i class="far fa-times-circle fa-3x col-12 text-center" id="iconSinProductos"></i>
+                                     <p class="col-12 text-center" id="sinProductos">No hay productos en el carrito</p>`);
+
+    $('#keepShopping').off().click(function (e) {  
+        cerrarCarrito();
+    });
+
+    $('#keepShopping').text('Seguir comprando')
+                      .removeAttr('class');
 }
